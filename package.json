@@ -1,0 +1,19 @@
+{
+  "name": "retex",
+  "version": "1.0.0",
+  "description": "A Discord bot that renders LaTeX equations from messages",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["discord", "bot", "latex", "math"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.0.3",
+    "node-latex": "^3.1.0",
+    "pdf-img-convert": "^1.2.1"
+  }
+}
