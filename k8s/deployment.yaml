@@ -14,7 +14,8 @@ spec:
       labels:
         app: retex-bot
     spec:
-      serviceAccountName: retex-bot-sa
+      imagePullSecrets:
+        - name: ghcr-auth
       containers:
       - name: retex-bot
         image: retex-bot:latest
@@ -32,11 +33,3 @@ spec:
           limits:
             cpu: 500m
             memory: 512Mi
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: retex-bot-secrets
-type: Opaque
-stringData:
-  DISCORD_TOKEN: "" # This will be filled in via kubectl or a secrets management tool
